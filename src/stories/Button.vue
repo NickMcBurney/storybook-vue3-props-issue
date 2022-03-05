@@ -1,10 +1,12 @@
 <template>
   <button type="button" :class="classes" @click="onClick" :style="style">{{ label }}</button>
+  <p>`someProp` value: {{ someProp }}</p>
 </template>
 
 <script>
 import './button.css';
 import { reactive, computed } from 'vue';
+import sharedProps from './sharedProps';
 
 export default {
   name: 'my-button',
@@ -27,6 +29,8 @@ export default {
     backgroundColor: {
       type: String,
     },
+    // SHARED PROPS ADDED
+    ...sharedProps
   },
 
   emits: ['click'],
