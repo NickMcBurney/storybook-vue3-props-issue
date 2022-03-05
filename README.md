@@ -1,24 +1,7 @@
 # storybook-vue3-props-issue
 
-## Project setup
-```
-npm install
-```
+### Case:
+I have a component library which has a number of components using the same props, rather than duplicating the same prop setup across multiple components I used an external file to create props and import them into each component. The props are added to component props by adding via spread operator.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Issue
+Props defined at component level are shown in Storybook under the 'Props' heading. But the props imported to components are not shown here.
